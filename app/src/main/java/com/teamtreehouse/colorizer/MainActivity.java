@@ -1,9 +1,13 @@
 package com.teamtreehouse.colorizer;
 
+import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
+import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -27,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadImage() {
         Glide.with(this).load(imageResIds[imageIndex]).into(imageView);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        /*Adding menu item:*/
+        MenuItem menuItem = menu.add("Next Image");
+
+        /*Adding menu in action bar:*/
+        menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
+        /*Adding icon to the menu:*/
+        menuItem.setIcon(R.drawable.ic_add_a_photo_black_24dp);
+        menuItem.getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+
+        return true;
     }
 
     private void updateSaturation() {
