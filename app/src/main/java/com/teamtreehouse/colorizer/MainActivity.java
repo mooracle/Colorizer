@@ -15,8 +15,8 @@ import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
     ImageView imageView;
-    int[] imageResIds = {R.drawable.cuba1, R.drawable.cuba2, R.drawable.cuba3};
-    int imageIndex = 0;
+    private int[] imageResIds = {R.drawable.cuba1, R.drawable.cuba2, R.drawable.cuba3};
+    private int imageIndex = 0;
     boolean color = true;
     boolean red = true;
     boolean green = true;
@@ -60,6 +60,30 @@ public class MainActivity extends AppCompatActivity {
             case R.id.color:
                 color = !color;
                 updateSaturation();
+                invalidateOptionsMenu();
+                break;
+
+            case R.id.red:
+                red = !red;
+                updateColors();
+                item.setChecked(red);
+                break;
+
+            case R.id.green:
+                green = !green;
+                updateColors();
+                item.setChecked(green);
+                break;
+
+            case R.id.blue:
+                blue = !blue;
+                updateColors();
+                item.setChecked(blue);
+                break;
+
+            case R.id.reset:
+                imageView.clearColorFilter();
+                red = green = blue = color = true;
                 invalidateOptionsMenu();
                 break;
         }

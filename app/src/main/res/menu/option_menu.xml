@@ -14,18 +14,18 @@
         android:title="@string/color_menu"
         app:showAsAction="always" />
     <group android:id="@+id/colorGroup">
-    <item
-        android:id="@+id/red"
-        android:checkable="true"
-        android:title="@string/red_menu" />
-    <item
-        android:id="@+id/green"
-        android:checkable="true"
-        android:title="@string/green_menu" />
-    <item
-        android:id="@+id/blue"
-        android:checkable="true"
-        android:title="@string/blue_menu" />
+        <item
+            android:id="@+id/red"
+            android:checkable="true"
+            android:title="@string/red_menu" />
+        <item
+            android:id="@+id/green"
+            android:checkable="true"
+            android:title="@string/green_menu" />
+        <item
+            android:id="@+id/blue"
+            android:checkable="true"
+            android:title="@string/blue_menu" />
     </group>
     <item
         android:id="@+id/reset"
