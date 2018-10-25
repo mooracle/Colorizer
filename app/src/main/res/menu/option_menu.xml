@@ -13,6 +13,7 @@
         android:id="@+id/color"
         android:title="@string/color_menu"
         app:showAsAction="always" />
+    <group android:id="@+id/colorGroup">
     <item
         android:id="@+id/red"
         android:checkable="true"
@@ -25,6 +26,7 @@
         android:id="@+id/blue"
         android:checkable="true"
         android:title="@string/blue_menu" />
+    </group>
     <item
         android:id="@+id/reset"
         android:title="@string/reset_menu" />
